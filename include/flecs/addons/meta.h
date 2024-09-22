@@ -147,7 +147,7 @@ FLECS_API extern const ecs_entity_t ecs_id(ecs_entity_t);
 FLECS_API extern const ecs_entity_t ecs_id(ecs_id_t);
 
 /** Type kinds supported by meta addon */
-typedef enum ecs_type_kind_t {
+typedef enum ecs_type_kind_t : uint32_t {
     EcsPrimitiveType,
     EcsBitmaskType,
     EcsEnumType,
@@ -166,7 +166,7 @@ typedef struct EcsMetaType {
 } EcsMetaType;
 
 /** Primitive type kinds supported by meta addon */
-typedef enum ecs_primitive_kind_t {
+typedef enum ecs_primitive_kind_t : uint32_t {
     EcsBool = 1,
     EcsChar,
     EcsByte,
